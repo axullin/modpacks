@@ -1,6 +1,7 @@
 name = "Kaleidoscope Hodgepodge"
 filename = "kaleidoscope_hodgepodge-1.1.0-fabric+mc1.21.1.jar"
 side = "both"
+pin = true
 
 [download]
 url = "https://cdn.modrinth.com/data/5Qu2osmI/versions/R78eUnXL/kaleidoscope_hodgepodge-1.1.0-fabric%2Bmc1.21.1.jar"

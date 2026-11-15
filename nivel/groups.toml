@@ -1,0 +1,117 @@
+# AutoModpack (v5) groups that players can turn off in the "Modpacks" screen.
+#
+# Only client-side mods (side = "client" in their .pw.toml) may be listed here,
+# unless the group sets `client-optional = true`: then it may also list mods
+# that run on the server too but that clients can join without (no blocks,
+# items or entities of their own; Modrinth lists them as "client: optional").
+# The server keeps its own copy either way.
+# Anything not listed stays in the required "main" group, so new mods are
+# never optional by accident. Mods are referenced by their packwiz slug
+# (the .pw.toml file name without the extension).
+#
+# Every resource pack and shader pack automatically gets its own group
+# ("rp-<slug>" / "shader-<slug>"); the sections at the bottom only add
+# requirements to them.
+
+[groups.shaders]
+category = "Graphics"
+display-name = "Shader support (Iris)"
+description = "Lets you use shader packs. Needed by every shader pack."
+mods = ["iris"]
+
+[groups.distant-horizons]
+category = "Graphics"
+display-name = "Distant Horizons"
+description = "Renders terrain far beyond the normal view distance. Uses a lot of memory, and does not work on Android launchers."
+mods = ["distanthorizons"]
+client-optional = true
+
+[groups.entity-models]
+category = "Graphics"
+display-name = "Entity models and textures (EMF/ETF)"
+description = "Custom and animated entity models. Needed by Fresh Animations, Just Expressions, Nautilus 3D and Vanilla Experience+."
+mods = ["entity-model-features", "entitytexturefeatures", "emf-compat-core", "emf-compat-gliders"]
+
+[groups.animations]
+category = "Graphics"
+display-name = "Player animations"
+description = "Not Enough Animations, Eating Animation, Punchy! and 3D Skin Layers."
+mods = ["not-enough-animations", "eating-animation", "punchy-fpa", "3dskinlayers"]
+
+[groups.particles]
+category = "Graphics"
+display-name = "Particles and weather effects"
+description = "Particular, Falling Leaves, Visuality and Particle Rain."
+mods = ["particular", "fallingleaves", "visuality", "particle-rain"]
+
+[groups.sky]
+category = "Graphics"
+display-name = "Clouds and sky (Cirrus)"
+description = "Cloud and skybox overhaul."
+mods = ["cirrus"]
+
+[groups.water]
+category = "Graphics"
+display-name = "Water (Wakes, Clear Water)"
+description = "Boat and swimming wakes, clearer water."
+mods = ["wakes", "clear-water"]
+
+[groups.dynamic-lights]
+category = "Graphics"
+display-name = "Dynamic lights"
+description = "Held torches and other light sources light up the area around you."
+mods = ["lambdynamiclights"]
+
+[groups.ambience]
+category = "Audio"
+display-name = "Ambient sounds and footsteps"
+description = "AmbientSounds and Presence Footsteps."
+mods = ["ambientsounds", "presence-footsteps"]
+
+[groups.hud]
+category = "Interface"
+display-name = "HUD tweaks"
+description = "Held Item Info, Status Effect Bars, Chat Heads, Shadow Drop and Traveler's Titles."
+mods = ["held-item-info", "status-effect-bars", "chat-heads", "shadow-drop", "travelers-titles"]
+
+[groups.zoom]
+category = "Interface"
+display-name = "Zoom (Zoomify)"
+description = "Zoom key."
+mods = ["zoomify"]
+
+[groups.light-overlay]
+category = "Interface"
+display-name = "Light level overlay"
+description = "Toggleable overlay that shows where mobs can spawn."
+mods = ["light-overlay"]
+
+[groups.weather-glass]
+category = "Interface"
+display-name = "Weather Glass"
+description = "Weather forecast item display."
+mods = ["weather-glass"]
+
+[groups.inventory-tweaks]
+category = "Interface"
+display-name = "Mouse Tweaks and Cut Through"
+description = "Faster inventory handling, and interacting through grass and flowers."
+mods = ["mouse-tweaks", "cut-through"]
+
+[groups.youtube]
+category = "Interface"
+display-name = "YouTube links in displays"
+description = "Lets WATERFrAMES displays play YouTube videos. Other video links keep working without it."
+mods = ["watermedia-yt-plugin"]
+
+# Extra requirements for the automatic per-pack groups.
+[resourcepacks]
+fresh-animations = ["entity-models"]
+fresh-animations-extensions = ["entity-models", "rp-fresh-animations"]
+fresh-animations-player = ["entity-models", "rp-fresh-animations"]
+just-expressions = ["entity-models"]
+nautilus3d = ["entity-models"]
+vanilla-exp = ["entity-models"]
+
+[shaderpacks]
+requires = ["shaders"]

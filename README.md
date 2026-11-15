@@ -19,6 +19,8 @@ Current packs:
   defaults/        default client files (config/, options.txt), handed out to players
   server-config/   configs that only belong on the server
   datapacks/       datapacks copied into the world's datapacks folder
+  groups.toml      AutoModpack groups players can turn off (see Distributing to players)
+checks/            `nix flake check` scripts
 flake.nix          builds every pack into a Nix package
 ```
 
@@ -84,6 +86,29 @@ hashes, and the build fails until they are updated:
 2. Build it, e.g. `nix build .#nivel-server`.
 3. Copy the `got: sha256-...` value from the error into `flake.nix`.
 4. Repeat for the other side (`.#nivel-client`).
+
+## Checking the pack
+
+After changing a pack, and always after `packwiz update`, run:
+
+```sh
+nix flake check
+```
+
+It builds every pack and runs `checks/fabric-depcheck.py` on the fetched mods, which
+approximates Fabric Loader's dependency resolution for the pack's loader, Minecraft and
+Java version (`javaVersion` in `flake.nix`). It fails on:
+
+- `MISSING`: a mod depends on something no mod provides
+- `VERSION`: a dependency is present, but outside the version range a mod needs
+  (including the Fabric Loader, Minecraft and Java version)
+- `BREAKS`: a mod declares it breaks with a version that is in the pack
+- `BYTECODE`: a mod is compiled for a newer Java than the server runs. Fabric does not
+  catch this, the game crashes when the class is loaded
+
+It cannot catch a mod using a class that another mod removed in an update (mod metadata
+does not say which classes it uses). If the server still crashes after an update, find the
+mod in the stack trace, roll it back to the previous version and `packwiz pin` it.
 
 ## Creating a new modpack
 
@@ -156,10 +181,16 @@ in
 
 ## Distributing to players
 
-The `nivel` pack includes [AutoModpack](https://modrinth.com/mod/automodpack). The server
-hosts the client mods, resource packs, shader packs and `defaults/` under
-`automodpack/host-modpack/main/`, and players only need Fabric plus AutoModpack installed;
+The `nivel` pack includes [AutoModpack](https://modrinth.com/mod/automodpack) (v5). The
+server hosts the client mods, resource packs, shader packs and `defaults/` under
+`automodpack/host-modpack/`, and players only need Fabric plus AutoModpack installed;
 everything else is downloaded when they join.
+
+`<pack>/groups.toml` defines AutoModpack groups that players can turn off from the
+**Modpacks** button in the multiplayer screen (Pack groups). Only client-side mods can be
+listed there; anything not listed stays required. Every resource pack and shader pack gets
+its own group automatically. The NixOS config reads this file and generates
+`automodpack/server.conf` from it.
 
 Players can also import the pack into a launcher that supports packwiz (Prism Launcher via
 packwiz-installer) using the raw URL of `pack/pack.toml`.

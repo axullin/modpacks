@@ -28,10 +28,13 @@
       # These must be updated whenever the pack's contents change (see README).
       modpacks = {
         nivel = {
-          server = "sha256-4Ggm0MrgLgz4V+35xEwlnqHP3VQbg7PN2WcBVs2v78c=";
-          client = "sha256-8/P/xwjmaj6S3A9bKAHr/X+mriS0m48BhCzV82JhBVU=";
+          server = "sha256-DQ3yJjJC9yJ1T+jMmFdOPBF157qmnNSUAR4dP1GmTk8=";
+          client = "sha256-zVmpgOhZ1KEAuyC6rkGdV4qPDo9r1xkxKx6GgjZ9BCo=";
         };
       };
+
+      # Java the server runs on (nix-minecraft's JRE for 1.21.1), clients are expected to match
+      javaVersion = "21";
 
       mkModpack =
         pkgs: name: side: packHash:
@@ -63,6 +66,22 @@
             side: hash: lib.nameValuePair "${name}-${side}" (mkModpack pkgs name side hash)
           ) hashes
         ) modpacks
+      );
+
+      # Approximates Fabric's dependency resolution on every built mod set,
+      # so broken updates fail `nix flake check` instead of the server
+      checks = forAllSystems (
+        pkgs:
+        lib.mapAttrs' (
+          name: modpack:
+          lib.nameValuePair "${name}-dependencies" (
+            pkgs.runCommand "${name}-dependencies" { nativeBuildInputs = [ pkgs.python3 ]; } ''
+              python3 -I ${./checks/fabric-depcheck.py} ${modpack}/mods \
+                ${modpack.loaderVersion} ${modpack.minecraftVersion} ${javaVersion}
+              touch $out
+            ''
+          )
+        ) self.packages.${pkgs.stdenv.hostPlatform.system}
       );
 
       devShells = forAllSystems (pkgs: {

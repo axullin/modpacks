@@ -1,0 +1,13 @@
+name = "Punchy!"
+filename = "punchy-3.2b-fabric-1.21.1.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/8aoMKplv/versions/WZaxBfix/punchy-3.2b-fabric-1.21.1.jar"
+hash-format = "sha512"
+hash = "26556d1802302b8107448239574d4ed335e4a48c662a0118d5798ac35db651a3514512c7b7f115ab48bc62eb35d246a18cbb4cfe73130cfa5de54d40d0426a44"
+
+[update]
+[update.modrinth]
+mod-id = "8aoMKplv"
+version = "WZaxBfix"

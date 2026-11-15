@@ -1,13 +1,13 @@
 name = "Olafs Relatively Placed Blocks"
-filename = "oalfsrelativeblocks-1.0.0+mc1.21.1.jar"
+filename = "olafsrelativeblocks-2.0.2+mc1.21.1.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/ev5ltlL2/versions/qiwc3nG4/oalfsrelativeblocks-1.0.0%2Bmc1.21.1.jar"
+url = "https://cdn.modrinth.com/data/ev5ltlL2/versions/XFV9v3zt/olafsrelativeblocks-2.0.2%2Bmc1.21.1.jar"
 hash-format = "sha512"
-hash = "0a77a3de40a11cfd50c039d722a6a7f4d7b1d58775f007508c84973e16f2ebb6bd2860c651c7f0b90223b0c15b8255f254fa43cc6fe8067512d1f919901cc8fe"
+hash = "b0eb0b9f06a7a0a132e1f8f5de163d33c96c82d147a4f05ab60ce4d025429ef2ab7cb17a151b33334cfe4acb90c494738e35f6dbcaf1fbd56d077c0948bb85fb"
 
 [update]
 [update.modrinth]
 mod-id = "ev5ltlL2"
-version = "qiwc3nG4"
+version = "XFV9v3zt"

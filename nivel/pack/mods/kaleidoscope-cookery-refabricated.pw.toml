@@ -1,6 +1,7 @@
 name = "Kaleidoscope Cookery Refabricated"
 filename = "kaleidoscope_cookery-1.6.0.1-fabric+mc1.21.1.jar"
 side = "both"
+pin = true
 
 [download]
 url = "https://cdn.modrinth.com/data/Ct11Kuii/versions/6qH7u3em/kaleidoscope_cookery-1.6.0.1-fabric%2Bmc1.21.1.jar"
