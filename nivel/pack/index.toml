@@ -37,12 +37,12 @@ metafile = true
 
 [[files]]
 file = "mods/architectury-api.pw.toml"
-hash = "0fb3808193da9b587367337d12d202d7b006e2522637a6502913d66a84f8626f"
+hash = "5b999a65cbb3ca23957558a6985a0ae9a5b7e5e28e371222cef3825d0d7f85da"
 metafile = true
 
 [[files]]
 file = "mods/automodpack.pw.toml"
-hash = "6824ea384e2d3e0360a77a60172576cc43415b15243f4f63a79a0a0790165209"
+hash = "53b7beb4046bd6d00cee083ce3d7be9be5dfa392515c68596f932eaba7f184fe"
 metafile = true
 
 [[files]]
@@ -137,7 +137,7 @@ metafile = true
 
 [[files]]
 file = "mods/collective.pw.toml"
-hash = "1c9f21b7aa723402f2685c0cd531a90316b06bff0e78f20ab0b60712a56cc274"
+hash = "9d9802c9b8af95c7e98356371cad12a2d87b4609c7bafe36c63352e7d448b58c"
 metafile = true
 
 [[files]]
@@ -177,7 +177,7 @@ metafile = true
 
 [[files]]
 file = "mods/diegesis.pw.toml"
-hash = "07a5bfddb2e99c0a51ca2d1e1d0d80996e50e907f184e3903e943f422c4f9177"
+hash = "cbb1e68bb69c9c5291f6128f86ba42c39df1e78ed4faab42185a808906198344"
 metafile = true
 
 [[files]]
@@ -188,16 +188,6 @@ metafile = true
 [[files]]
 file = "mods/dynamic-fps.pw.toml"
 hash = "582070fa54fe1743a837c0351eee7ea4a79080e647d5438656d372ae9433b272"
-metafile = true
-
-[[files]]
-file = "mods/easy-anvils.pw.toml"
-hash = "c03848ab316f8f8e07656e08c675541ce90f0ad729d5b31df336fe8f27a58b3f"
-metafile = true
-
-[[files]]
-file = "mods/easy-magic.pw.toml"
-hash = "e7a682a577780a52963a998f6941c13cbd75455a65368e9b665c56efca37cbb6"
 metafile = true
 
 [[files]]
@@ -242,7 +232,7 @@ metafile = true
 
 [[files]]
 file = "mods/entityculling.pw.toml"
-hash = "d00536355d56263050b5244306f43a4c3497dad015dd72aac654e2b187ab2064"
+hash = "62b6d7dd6edf043e689b7c925e558bc05156d97549c1f5b94e5144bf6389e5c8"
 metafile = true
 
 [[files]]
@@ -317,7 +307,7 @@ metafile = true
 
 [[files]]
 file = "mods/hands-on-delight.pw.toml"
-hash = "e54a3a3062551a936e8273244f7a7c03bfdecd892f2df9a75261de5bd8f34a3a"
+hash = "df0e3e4921b74a502bf71dbc0cd42be9feb1075d524e1e92f3511a85bef797ce"
 metafile = true
 
 [[files]]
@@ -362,7 +352,7 @@ metafile = true
 
 [[files]]
 file = "mods/kaleidoscope-cookery-refabricated.pw.toml"
-hash = "a8c8536de859171a5af0f06b868e40dcac147f0c3d129c8a6c07a051c5ac525f"
+hash = "d835bd132e3a39d65115520230814bcf6979773f013ce44c2c123c0a2f1c6b0d"
 metafile = true
 
 [[files]]
@@ -372,7 +362,7 @@ metafile = true
 
 [[files]]
 file = "mods/kaleidoscope-hodgepodge.pw.toml"
-hash = "dddb2833c8e3a38b41605a2004d3337245dc2bd387954307fdfa49c54bcfa9a2"
+hash = "c24a016eaaca26a3d2515db0984020def14c889331dc8cee815d5e24eec4ca0d"
 metafile = true
 
 [[files]]
@@ -432,7 +422,7 @@ metafile = true
 
 [[files]]
 file = "mods/mob-control.pw.toml"
-hash = "a23e6426dc8677dea9ce8cd47208dd44f982b98ff7fe2e3e8ea12a39f170d5da"
+hash = "68d41213d83419e966b766d2fa06e1b02a0437261163988622758fdca426ada2"
 metafile = true
 
 [[files]]
@@ -551,11 +541,6 @@ hash = "8083e49b94eb72deca40e87757359cfaceef8d1f6a1a07c82f9e8bc9285eb5f2"
 metafile = true
 
 [[files]]
-file = "mods/punchy-fpa.pw.toml"
-hash = "3d9a39dc07a93cadad43f971edf2a4c2b96958e764dec0aee1422c676c8fdd02"
-metafile = true
-
-[[files]]
 file = "mods/puzzles-lib.pw.toml"
 hash = "989cde9caba6f1b61aae36f9048725335a8da1d90ad33dc57a58ef3c04d6858b"
 metafile = true
@@ -632,7 +617,7 @@ metafile = true
 
 [[files]]
 file = "mods/sodium-extra.pw.toml"
-hash = "13de74ab1be3547d60b743f4cb1c574bf59b54debdf84a750607b56f98825b13"
+hash = "006a4eff494be9b351aaa0ce827f5a0e0ecbae167070e03c2601a9bf4cce5dc1"
 metafile = true
 
 [[files]]
@@ -687,7 +672,7 @@ metafile = true
 
 [[files]]
 file = "mods/structure-layout-optimizer.pw.toml"
-hash = "5920114e78408e06d787a34694bcb7cdd252d723ed70756d55c882d28c2fd165"
+hash = "c65852d95ebb4032b6f688d1033e073e1eef6c0f49dc45cf66f1e20c3f8fe593"
 metafile = true
 
 [[files]]
@@ -731,11 +716,6 @@ hash = "0bc63410e5b6f05f753dbdf5bb39736059fc89e4e0cf313a581229c1614c4f88"
 metafile = true
 
 [[files]]
-file = "mods/visual-workbench.pw.toml"
-hash = "99e9e4bbcf17d7be670fb737e4da6709eaa7d3bb83f795011444a0d961348331"
-metafile = true
-
-[[files]]
 file = "mods/visuality.pw.toml"
 hash = "39426bfeeab22ea17f94fd3904dd9b78f9a3c9b4ddcb732b734ddbfd0e3568af"
 metafile = true
@@ -767,12 +747,12 @@ metafile = true
 
 [[files]]
 file = "mods/waystones.pw.toml"
-hash = "442c13fe3b1f0462adf895bbab49388967cafc294f56c57d2d4b1db6b0b24d53"
+hash = "90af0ef891cfeb34d82498cfa71943a63e883fc6f961896ebb10ca78fd366073"
 metafile = true
 
 [[files]]
 file = "mods/weather-glass.pw.toml"
-hash = "80441397ae4ba8a0b195f6ad57d2c84f64a638f99f2d341f126da2b74246744f"
+hash = "7ecac23b2124e9fcd71baeee1cbeda88f9f01f68278ef6e63e02a5e1c884fc03"
 metafile = true
 
 [[files]]
@@ -908,6 +888,11 @@ metafile = true
 [[files]]
 file = "resourcepacks/just-expressions.pw.toml"
 hash = "35a9ac12407b86a17d0271404a4e4f0cc2ad7e47bef74ce21b3b7c22f2888750"
+metafile = true
+
+[[files]]
+file = "resourcepacks/nature-x.pw.toml"
+hash = "966f8362b7947207ff321e760a72be513a4160f340759a91f049f6a12af95566"
 metafile = true
 
 [[files]]

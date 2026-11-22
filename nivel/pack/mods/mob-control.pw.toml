@@ -1,14 +1,13 @@
 name = "Mob Control"
-filename = "mobcontrol-1.21.1-1.5.11.jar"
+filename = "mobcontrol-1.21.1-2.0.1-beta-2.jar"
 side = "both"
-pin = true
 
 [download]
-url = "https://cdn.modrinth.com/data/4gTwBSot/versions/OubfExhj/mobcontrol-1.21.1-1.5.11.jar"
+url = "https://cdn.modrinth.com/data/4gTwBSot/versions/kM91z5x3/mobcontrol-1.21.1-2.0.1-beta-2.jar"
 hash-format = "sha512"
-hash = "5efe4d65f55e82d1fdfa84406ff5d354b66ca4e2972f07043a1261fc1c2022c3b3f4a6af3455a355f29bb7f0144d587d965077d45ba26b6a78468ef28bec435b"
+hash = "c73e5c2d446bc166f691c16046518b02d3ff684c32da7ff80275e7bcb9da1da98d6acd5c673694ea03415e5f95bd31540b8d88f48ffd0f336e153d3a261e2a4c"
 
 [update]
 [update.modrinth]
 mod-id = "4gTwBSot"
-version = "OubfExhj"
+version = "kM91z5x3"

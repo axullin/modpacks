@@ -35,8 +35,8 @@ mods = ["entity-model-features", "entitytexturefeatures", "emf-compat-core", "em
 [groups.animations]
 category = "Graphics"
 display-name = "Player animations"
-description = "Not Enough Animations, Eating Animation, Punchy! and 3D Skin Layers."
-mods = ["not-enough-animations", "eating-animation", "punchy-fpa", "3dskinlayers"]
+description = "Not Enough Animations, Eating Animation and 3D Skin Layers."
+mods = ["not-enough-animations", "eating-animation", "3dskinlayers"]
 
 [groups.particles]
 category = "Graphics"

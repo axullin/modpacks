@@ -28,8 +28,8 @@
       # These must be updated whenever the pack's contents change (see README).
       modpacks = {
         nivel = {
-          server = "sha256-DQ3yJjJC9yJ1T+jMmFdOPBF157qmnNSUAR4dP1GmTk8=";
-          client = "sha256-zVmpgOhZ1KEAuyC6rkGdV4qPDo9r1xkxKx6GgjZ9BCo=";
+          server = "sha256-/Ax4kjazUfSK6Ko6gps2xIAD6mCLdRPDszysGR6Rb9M=";
+          client = "sha256-Axczhdow7kRzmd+FaFqe4am1/vcMCpisKpl6KD6HqoM=";
         };
       };
 

@@ -1,13 +1,13 @@
 name = "Diegesis"
-filename = "diegesis-fabric-1.21.1-1.0.0-beta.7.jar"
+filename = "diegesis-fabric-1.21.1-1.0.0-beta.10.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "8304adfec7a7fe3ecb79ea5f4474192563a05e7c"
+hash = "084c24ea09a1fc8e93c90c627a636b31e15bd269"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 9551299
+file-id = 9624641
 project-id = 1790227

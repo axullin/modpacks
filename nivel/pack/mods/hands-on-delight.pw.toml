@@ -1,13 +1,13 @@
 name = "Hands-On Delight"
-filename = "handson_delight-fabric-1.21.1-1.3.0.jar"
+filename = "handson_delight-fabric-1.21.1-1.5.0.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "9205de312da1ecafd3ca4c8933cae73ad6157852"
+hash = "5213faa63e8ec95b1915a7e9eb81b95b63996247"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 9551310
+file-id = 9624657
 project-id = 1790221
