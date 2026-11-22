@@ -21,6 +21,7 @@ Current packs:
   datapacks/       datapacks copied into the world's datapacks folder
   groups.toml      AutoModpack groups players can turn off (see Distributing to players)
 checks/            `nix flake check` scripts
+lib/automodpack.nix  builds AutoModpack's host-modpack and server.conf from groups.toml
 flake.nix          builds every pack into a Nix package
 ```
 
@@ -159,11 +160,19 @@ fetched `mods/`, `resourcepacks/` and `shaderpacks/`. They also expose:
 - `loaderVersion` and `minecraftVersion`, read from `pack.toml`
 - `root`, the pack's directory in this repo (for `defaults/`, `server-config/`, `datapacks/`)
 
+Packs with a `groups.toml` also produce the files AutoModpack hosts (see
+[Distributing to players](#distributing-to-players)):
+
+- `<pack>-host-modpack`, the tree for `automodpack/host-modpack/`. AutoModpack v5 refuses
+  symlinks there, so copy it (nix-minecraft's `files` does) instead of symlinking it.
+- `<pack>-automodpack-conf`, the generated `automodpack/server.conf`
+
 Example with nix-minecraft:
 
 ```nix
 let
-  modpack = inputs.modpacks.packages.${pkgs.stdenv.hostPlatform.system}.nivel-server;
+  packages = inputs.modpacks.packages.${pkgs.stdenv.hostPlatform.system};
+  modpack = packages.nivel-server;
 in
 {
   services.minecraft-servers.servers.nivel = {
@@ -174,6 +183,10 @@ in
     symlinks = {
       mods = "${modpack}/mods";
       "config/mobcontrol.toml" = "${modpack.root}/server-config/mobcontrol.toml";
+    };
+    files = {
+      "automodpack/server.conf" = packages.nivel-automodpack-conf;
+      "automodpack/host-modpack" = packages.nivel-host-modpack;
     };
   };
 }
@@ -189,8 +202,9 @@ everything else is downloaded when they join.
 `<pack>/groups.toml` defines AutoModpack groups that players can turn off from the
 **Modpacks** button in the multiplayer screen (Pack groups). Only client-side mods can be
 listed there; anything not listed stays required. Every resource pack and shader pack gets
-its own group automatically. The NixOS config reads this file and generates
-`automodpack/server.conf` from it.
+its own group automatically. The flake reads this file and generates
+`<pack>-automodpack-conf` and `<pack>-host-modpack` from it, and a mistake in it (an
+unknown group in `requires`, a mod that has to stay required) fails the evaluation.
 
 Players can also import the pack into a launcher that supports packwiz (Prism Launcher via
 packwiz-installer) using the raw URL of `pack/pack.toml`.
